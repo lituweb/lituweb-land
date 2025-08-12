@@ -15,11 +15,11 @@ export default function About() {
             <Users size={48} className="text-pink-600" />
           </div>
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent">
-            Sobre Nosotros
+            Sobre Mí
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto">
-            Somos un equipo apasionado por crear experiencias digitales únicas y efectivas.
-            Nuestro objetivo es ayudarte a destacar y conectar con tu audiencia a través de
+            Soy un persona apasionada por crear experiencias digitales únicas y efectivas.
+            Mi objetivo es ayudarte a destacar y conectar con tu audiencia a través de
             diseños modernos, tecnología de vanguardia y estrategias creativas.
           </p>
         </motion.div>

@@ -16,7 +16,7 @@ export default function Navbar() {
       </div>
       <ul className="flex sm:gap-6 invisible sm:visible text-gray-700 font-medium">
         <li><a href="#features" className="text-xs sm:text-base hover:text-pink-600">Características</a></li>
-        <li><a href="#about" className="text-xs sm:text-base hover:text-pink-600">Sobre Nosotros</a></li>
+        <li><a href="#about" className="text-xs sm:text-base hover:text-pink-600">Sobre Mí</a></li>
         <li><a href="#contact" className="text-xs sm:text-base hover:text-pink-600">Contacto</a></li>
       </ul>
     </motion.nav>

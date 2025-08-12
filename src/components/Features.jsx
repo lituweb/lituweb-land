@@ -13,7 +13,24 @@ export default function Features() {
       <h3 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent">
         Características Principales
       </h3>
-      <div className="grid md:grid-cols-3 gap-8">
+
+      {/* Mobile: Carrusel */}
+      <div className="flex gap-6 overflow-x-auto pb-4 md:hidden snap-x snap-mandatory">
+        {features.map((f, i) => (
+          <motion.div
+            key={i}
+            className="min-w-[50%] max-w-[100%] bg-white rounded-xl shadow-lg p-6 text-center snap-center flex-shrink-0 hover:shadow-xl transition-shadow"
+            whileHover={{ scale: 1.05 }}
+          >
+            <div className="flex justify-center mb-4">{f.icon}</div>
+            <h4 className="text-xl font-semibold mb-2">{f.title}</h4>
+            <p className="text-gray-600">{f.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Desktop: Grid */}
+      <div className="hidden md:grid md:grid-cols-3 gap-8">
         {features.map((f, i) => (
           <motion.div
             key={i}

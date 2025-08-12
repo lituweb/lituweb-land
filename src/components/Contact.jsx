@@ -15,12 +15,26 @@ export default function Contact() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      setSubmitted(true);
-      setForm({ name: "", email: "", message: "" });
+      try {
+        const res = await fetch("https://formspree.io/f/xldlzord", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        });
+        if (res.ok) {
+          setSubmitted(true);
+          setForm({ name: "", email: "", message: "" });
+          setErrors({});
+        } else {
+          console.error("Error al enviar el formulario");
+        }
+      } catch (err) {
+        console.error("Error de red:", err);
+      }
     } else {
       setErrors(validationErrors);
     }
@@ -40,9 +54,9 @@ export default function Contact() {
             <Mail size={48} className="text-orange-600" />
           </div>
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent">
-            Contactanos
+            Contáctanos
           </h2>
-          <p className="text-gray-700 mb-8">¿Tenés dudas o un proyecto en mente? Escribinos.</p>
+          <p className="text-gray-700 mb-8">¿Tienes dudas o un proyecto en mente? Escribinos.</p>
         </motion.div>
 
         <form
@@ -73,7 +87,7 @@ export default function Contact() {
             <textarea
               placeholder="Tu mensaje"
               rows="4"
-              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-fucsia"
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
             ></textarea>
@@ -95,7 +109,7 @@ export default function Contact() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            ¡Gracias por tu mensaje! Te responderemos pronto.
+            ¡Gracias por tu mensaje! Te respondemos en un rato.
           </motion.p>
         )}
       </div>
