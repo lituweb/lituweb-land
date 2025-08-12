@@ -54,9 +54,9 @@ export default function Contact() {
             <Mail size={48} className="text-orange-600" />
           </div>
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent">
-            Contáctanos
+            Contactame
           </h2>
-          <p className="text-gray-700 mb-8">¿Tienes dudas o un proyecto en mente? Escribinos.</p>
+          <p className="text-gray-700 mb-8">¿Tenes dudas o un proyecto en mente? Escribime.</p>
         </motion.div>
 
         <form

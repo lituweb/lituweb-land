@@ -17,8 +17,13 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        Creamos soluciones digitales impactantes para que destaques sobre la competencia.
+        Creo soluciones digitales impactantes para que destaques sobre la competencia.
       </motion.p>
+      <a
+      href="https://wa.me/5493541396868?text=Hola,%20quiero%20más%20información"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <motion.button
         className="mt-6 px-8 py-3 bg-white text-fucsia font-semibold rounded-xl shadow-lg hover:scale-105 transition-all"
         whileHover={{ scale: 1.05 }}
@@ -26,6 +31,7 @@ export default function Hero() {
       >
         ¡Comenzá ahora!
       </motion.button>
+    </a>
     </section>
   );
 }
