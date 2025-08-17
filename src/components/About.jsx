@@ -18,7 +18,7 @@ export default function About() {
             Sobre Mí
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto">
-            Soy un persona apasionada por crear experiencias digitales únicas y efectivas.
+            Soy Olivia Iturrusgarai, me encanta crear experiencias digitales únicas y efectivas.
             Mi objetivo es ayudarte a destacar y conectar con tu audiencia a través de
             diseños modernos, tecnología de vanguardia y estrategias creativas.
           </p>
